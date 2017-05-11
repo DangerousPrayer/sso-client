@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限接口测试</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input id="add-btn" type="button" value="add"></td>
+        <td><input id="update-btn" type="button" value="update"></td>
+    </tr>
+    <tr>
+        <td><input id="show-btn" type="button" value="show"></td>
+        <td><input id="del-btn" type="button" value="delete"></td>
+    </tr>
+</table>
+<script src="/lib/js/jquery-1.10.2.min.js"></script>
+<script src="/lib/js/jquery.cookie.js"></script>
+<script src="/js/ajax-util.js"></script>
+<script src="/lib/js/template.js"></script>
+
+<script>
+    $("#add-btn").click(function () {
+        AJAX.POST("/add")
+    })
+    $("#update-btn").click(function () {
+        AJAX.POST("/update")
+    })
+    $("#show-btn").click(function () {
+        AJAX.POST("/show")
+    })
+    $("#del-btn").click(function () {
+        AJAX.POST("/del")
+    })
+</script>
+</body>
+</html>
